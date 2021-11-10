@@ -1,0 +1,13 @@
+.DS_Store
+*/**/.DS_Store
+node_modules
+.idea/
+.vscode/*
+dist/
+.DS_Store
+local_test/
+*/**/lib
+lerna-debug.log
+build/
+*.tsbuildinfo
+docs

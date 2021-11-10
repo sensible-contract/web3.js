@@ -1,0 +1,24 @@
+{
+  "name": "@sensible-contract/bsv",
+  "version": "0.1.0",
+  "description": "BSV 1.5.6",
+  "main": "lib/index.js",
+  "types": "types/index.d.ts",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {},
+  "keywords": [
+    "bitcoin",
+    "bitcoin-sv"
+  ],
+  "author": "sensiblecontract.org",
+  "license": "MIT",
+  "dependencies": {
+    "bsv": "1.5.6"
+  },
+  "devDependencies": {
+    "typescript": "^4.3.5"
+  },
+  "gitHead": "816e5abee703b7e5aad1fbea2b5f53d1fbe6eb50"
+}

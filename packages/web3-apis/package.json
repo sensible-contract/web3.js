@@ -1,0 +1,24 @@
+{
+  "name": "@sensible-contract/web3-apis",
+  "version": "0.1.0",
+  "repository": "https://github.com/sensible-contract/web3.js/packages/web3-apis",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "compile": "tsc -b tsconfig.json"
+  },
+  "keywords": [],
+  "author": "sensiblecontract.org",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "qs": "^6.10.1"
+  },
+  "gitHead": "816e5abee703b7e5aad1fbea2b5f53d1fbe6eb50"
+}

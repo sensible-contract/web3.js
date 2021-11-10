@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib"
+  },
+  "include": ["src/**/*"],
+  "references": [
+    { "path": "../bsv" },
+    { "path": "../tx-composer" },
+    { "path": "../tx-decoder" },
+    { "path": "../wallet-provider" },
+    { "path": "../web3-utils" }
+  ]
+}

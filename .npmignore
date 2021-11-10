@@ -1,0 +1,12 @@
+*.idea
+docs
+.DS_Store
+gulpfile.js 
+tsconfig.json
+.vscode
+tools
+test
+local_test
+src
+node_modules
+.gitignore

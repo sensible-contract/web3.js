@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2015",
+    "allowJs": true,
+    "outDir": "./lib",
+    "sourceMap": true,
+    "declaration": true,
+    "composite": true,
+    "baseUrl": "./packages",
+    "esModuleInterop": true,
+    "paths": {
+      "@quramy/*": ["./*/src"]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "@sensible-contract/wallet-provider",
+  "version": "0.1.0",
+  "description": "web3 wallet provider",
+  "repository": "https://github.com/sensible-contract/web3.js/packages/wallet-provider",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "compile": "tsc -b tsconfig.json"
+  },
+  "keywords": [],
+  "author": "sensiblecontract.org",
+  "license": "MIT",
+  "dependencies": {
+    "@sensible-contract/bsv": "0.1.0"
+  },
+  "gitHead": "816e5abee703b7e5aad1fbea2b5f53d1fbe6eb50"
+}
