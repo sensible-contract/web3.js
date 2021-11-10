@@ -14,6 +14,9 @@
   "keywords": [],
   "author": "sensiblecontract.org",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@sensible-contract/bsv": "0.1.0",
     "@sensible-contract/tx-composer": "0.1.0",

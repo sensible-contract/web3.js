@@ -13,6 +13,9 @@
   "keywords": [],
   "author": "sensiblecontract.org",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@sensible-contract/wallet-provider": "0.1.0"
   },

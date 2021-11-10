@@ -16,6 +16,9 @@
   "keywords": [],
   "author": "sensiblecontract.org",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "axios": "^0.24.0",
     "qs": "^6.10.1"

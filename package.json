@@ -41,6 +41,9 @@
   ],
   "author": "sensiblecontract.org",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {},
   "devDependencies": {
     "@babel/cli": "^7.12.1",
