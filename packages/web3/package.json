@@ -1,13 +1,10 @@
 {
-  "name": "@sensible-contract/web3-utils",
+  "name": "@sensible-contract/web3",
   "version": "0.1.0",
-  "description": "Collection of utility functions used in web3.js.",
-  "repository": "https://github.com/sensible-contract/web3.js/packages/web3-utils",
+  "description": "web3",
+  "repository": "https://github.com/sensible-contract/web3.js/packages/web3",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "engines": {
-    "node": ">=12.0.0"
-  },
   "files": [
     "lib"
   ],
@@ -21,7 +18,10 @@
     "access": "public"
   },
   "dependencies": {
-    "@sensible-contract/bsv": "0.1.0"
+    "@sensible-contract/web3-apis": "0.1.0",
+    "@sensible-contract/web3-sensible": "0.1.0",
+    "@sensible-contract/web3-utils": "0.1.0",
+    "@sensible-contract/web3-wallet": "0.1.0"
   },
   "gitHead": "23899efd6d50da5d5e564083b0c73618c7eb70f8"
 }
