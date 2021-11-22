@@ -36,3 +36,4 @@ export interface Modules {
   Wallet: new (provider: WalletProvider, apis?: SensibleApi) => Wallet;
   Sensible: new (provider: WalletProvider) => Sensible;
 }
+module.exports = Web3;

@@ -12,6 +12,12 @@ module.exports = {
     new webpack.SourceMapDevToolPlugin({
       filename: "[file].map",
     }),
+    new webpack.ProvidePlugin({
+      process: "process/browser",
+    }),
+    new webpack.ProvidePlugin({
+      Buffer: ["buffer", "Buffer"],
+    }),
   ],
   resolve: {
     modules: ["node_modules"],
