@@ -43,6 +43,33 @@ export class TxComposer {
     this.tx = tx || new bsv.Transaction();
   }
 
+  toObject() {
+    let composer = {
+      tx: this.tx.toObject(),
+      inputInfos: this.inputInfos,
+      changeOutputIndex: this.changeOutputIndex,
+    };
+    return composer;
+  }
+
+  static fromObject(composerObj: any) {
+    let txObj = composerObj.tx;
+    let tx = new bsv.Transaction();
+    txObj.inputs.forEach((v) => {
+      tx.addInput(new bsv.Transaction.Input(v));
+    });
+    txObj.outputs.forEach((v) => {
+      tx.addOutput(new bsv.Transaction.Output(v));
+    });
+    tx.nLockTime = txObj.nLockTime;
+    tx.version = txObj.version;
+
+    let txComposer = new TxComposer(tx);
+    txComposer.inputInfos = composerObj.inputInfos;
+    txComposer.changeOutputIndex = composerObj.changeOutputIndex;
+    return txComposer;
+  }
+
   getRawHex() {
     return this.tx.serialize(true);
   }
