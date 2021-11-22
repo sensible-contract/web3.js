@@ -1,6 +1,6 @@
 {
   "name": "@sensible-contract/bsv",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "BSV 1.5.6",
   "main": "lib/index.js",
   "types": "types/index.d.ts",

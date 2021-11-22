@@ -1,6 +1,6 @@
 {
   "name": "@sensible-contract/web3-apis",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "repository": "https://github.com/sensible-contract/web3.js/packages/web3-apis",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
