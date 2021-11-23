@@ -90,7 +90,7 @@ export class TxComposer {
   }
 
   appendP2PKHInput(utxo: {
-    address: bsv.Address;
+    address: bsv.Address | string;
     satoshis: number;
     txId: string;
     outputIndex: number;
@@ -131,7 +131,10 @@ export class TxComposer {
     return inputIndex;
   }
 
-  appendP2PKHOutput(output: { address: bsv.Address; satoshis: number }) {
+  appendP2PKHOutput(output: {
+    address: bsv.Address | string;
+    satoshis: number;
+  }) {
     this.tx.addOutput(
       new bsv.Transaction.Output({
         script: new bsv.Script(output.address),
@@ -170,7 +173,11 @@ export class TxComposer {
       this.changeOutputIndex = 0;
     }
   }
-  appendChangeOutput(changeAddress: bsv.Address, feeb = 0.5, extraSize = 0) {
+  appendChangeOutput(
+    changeAddress: bsv.Address | string,
+    feeb = 0.5,
+    extraSize = 0
+  ) {
     //Calculate the fee and determine whether to change
     //If there is change, it will be output in the last item
     const unlockSize =
