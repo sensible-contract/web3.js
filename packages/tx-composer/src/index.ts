@@ -380,4 +380,13 @@ export class TxComposer {
       }
     });
   }
+
+  checkFeeRate(feeb: number) {
+    let feeRate = this.getFeeRate();
+    if (feeRate < feeb) {
+      throw new Error(
+        `Insufficient balance.The fee rate should not be less than ${feeb}, but in the end it is ${feeRate}.`
+      );
+    }
+  }
 }
