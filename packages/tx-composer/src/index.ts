@@ -137,7 +137,7 @@ export class TxComposer {
   }) {
     this.tx.addOutput(
       new bsv.Transaction.Output({
-        script: new bsv.Script(output.address),
+        script: new bsv.Script(new bsv.Address(output.address)),
         satoshis: output.satoshis,
       })
     );
