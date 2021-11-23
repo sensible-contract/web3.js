@@ -1,6 +1,6 @@
 {
   "name": "@sensible-contract/web3-sensible",
-  "version": "0.1.2-alpha.1",
+  "version": "0.1.2-alpha.2",
   "description": "A module to send sensible-contract transaction",
   "repository": "https://github.com/sensible-contract/web3.js/packages/web3-sensible",
   "main": "lib/index.js",
@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@sensible-contract/bsv": "0.1.1",
-    "@sensible-contract/tx-composer": "0.1.2-alpha.1",
+    "@sensible-contract/tx-composer": "0.1.2-alpha.2",
     "@sensible-contract/tx-decoder": "0.1.1",
     "@sensible-contract/wallet-provider": "0.1.1",
     "@sensible-contract/web3-utils": "0.1.1",
