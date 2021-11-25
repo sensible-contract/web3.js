@@ -13,8 +13,9 @@ export function generatePrivKeyFromMnemonic(
   let xprivkey = mne
     .toHDPrivateKey(passphrase, network)
     .deriveChild(derivationPath);
-  let privateKey = xprivkey.deriveChild(`m/${change}/${addressIndex}`)
-    .privateKey;
+  let privateKey = xprivkey.deriveChild(
+    `m/${change}/${addressIndex}`
+  ).privateKey;
   return privateKey;
 }
 
@@ -58,7 +59,7 @@ export class LocalStorageWalletProvider implements WalletProvider {
           nhashtype: v.sighashType,
         })
         .toString();
-      return { sig, publicKey: this.getPublicKey().toString() };
+      return { sig, publicKey: this.privateKey.publicKey.toString() };
     });
     return sigResults;
   }
