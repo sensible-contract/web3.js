@@ -389,4 +389,62 @@ export class TxComposer {
       );
     }
   }
+
+  unlock(sigResults: SigResult[]) {
+    this.inputInfos.forEach(({ inputIndex, sighashType, scriptHex }, index) => {
+      let input = this.tx.inputs[inputIndex];
+      let sigInfo = sigResults[index];
+      let publicKey = new bsv.PublicKey(sigInfo.publicKey);
+      let _sig = bsv.crypto.Signature.fromString(sigInfo.sig);
+      _sig.nhashtype = sighashType;
+      if (input.script.toHex()) {
+        let _sig2 = _sig.toTxFormat();
+        let oldSigHex = Buffer.concat([
+          numberToBuffer(PLACE_HOLDER_SIG.length / 2),
+          Buffer.from(PLACE_HOLDER_SIG, "hex"),
+        ]).toString("hex");
+
+        let newSigHex = Buffer.concat([
+          numberToBuffer(_sig2.length),
+          _sig2,
+        ]).toString("hex");
+
+        let oldPubKeyHex = Buffer.concat([
+          numberToBuffer(PLACE_HOLDER_PUBKEY.length / 2),
+          Buffer.from(PLACE_HOLDER_PUBKEY, "hex"),
+        ]).toString("hex");
+
+        const pubkeyBuffer = publicKey.toBuffer();
+        let newPubKeyHex = Buffer.concat([
+          numberToBuffer(pubkeyBuffer.length),
+          pubkeyBuffer,
+        ]).toString("hex");
+
+        input.setScript(
+          new bsv.Script(
+            input.script
+              .toHex()
+              .replace(oldSigHex, newSigHex)
+              .replace(oldPubKeyHex, newPubKeyHex)
+          )
+        );
+      } else {
+        const signature = new bsv.Transaction.Signature({
+          publicKey,
+          prevTxId: input.prevTxId,
+          outputIndex: input.outputIndex,
+          inputIndex: inputIndex,
+          signature: _sig,
+          sigtype: sighashType,
+        });
+        input.setScript(
+          bsv.Script.buildPublicKeyHashIn(
+            signature.publicKey,
+            signature.signature.toDER(),
+            signature.sigtype
+          )
+        );
+      }
+    });
+  }
 }
