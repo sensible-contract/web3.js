@@ -1,6 +1,6 @@
 {
   "name": "@sensible-contract/wallet-provider",
-  "version": "0.1.1",
+  "version": "0.1.2-alpha.3",
   "description": "web3 wallet provider",
   "repository": "https://github.com/sensible-contract/web3.js/packages/wallet-provider",
   "main": "lib/index.js",

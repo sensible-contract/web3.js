@@ -1,6 +1,6 @@
 {
   "name": "@sensible-contract/tx-decoder",
-  "version": "0.1.1",
+  "version": "0.1.2-alpha.3",
   "description": "A tool to decode transactions.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@sensible-contract/bsv": "0.1.1",
-    "@sensible-contract/wallet-provider": "0.1.1"
+    "@sensible-contract/wallet-provider": "0.1.2-alpha.3"
   },
   "gitHead": "23899efd6d50da5d5e564083b0c73618c7eb70f8"
 }
