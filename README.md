@@ -1,3 +1,6 @@
+
+# This repo is temporarily suspended for maintenance, please move to [sensible-web3](https://github.com/sensible-contract/sensible-web3)
+---
 # web3.js - BitcoinSV JavaScript API
 
 This is the BitcoinSV JavaScript API.
